@@ -47,7 +47,7 @@ and what it does not do. It is written to be read, not to be survived.</p>
 policy, including deletion requests: <a href="mailto:paultulai@gmail.com">paultulai@gmail.com</a>.</p>
 
 <h2>What the game stores</h2>
-<p>You play under an account, so the game keeps four things:</p>
+<p>You play under an account, so the game keeps these things:</p>
 <ol>
 <li><strong>Your account.</strong> A username you choose and a password you set. The
 password is never stored in readable form — authentication is handled by Supabase,
@@ -55,6 +55,13 @@ and the game itself never sees or keeps your password. Because the sign-in syste
 expects an email address, the game derives a synthetic one from your username
 (<code>yourname@player.ninja-world.game</code>). It is not a real mailbox, nothing is
 ever sent to it, and it is not used to contact you.</li>
+
+<li><strong>A recovery email, only if you add one.</strong> On your profile you can save a
+real email address so a forgotten password can be reset. It is used for exactly one
+thing: sending you a password-reset link when you ask for one from the login screen.
+It is never shown to other players, never used for marketing, and it is deleted with
+your account. Reset emails are delivered by Resend, which processes the address only
+to send that message.</li>
 
 <li><strong>Your characters and their world.</strong> Level, stats, inventory, quests,
 map discovery, clan membership and everything else the game needs to be the same
