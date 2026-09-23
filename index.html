@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NINJA WORLD — a shinobi RPG of long marches and real hunts</title>
+<meta name="description" content="A hidden-village RPG about the long way round. Cross a fog-of-war world on foot, hunt, skin, craft. No ads, nothing for sale.">
+<meta property="og:title" content="NINJA WORLD">
+<meta property="og:description" content="A shinobi RPG of long marches, real hunts, and a world that moves without you.">
+<meta property="og:image" content="feature.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    --bg: #0F1115; --bg2: #151922; --line: #262c38; --text: #E8E6E3; --dim: #9aa0aa; --faint: #6b7280;
+    --gold: #D4A94E; --red: #E5484D; --chakra: #4E9CD4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* ---- hero ---- */
+  header { padding: 4.5rem 0 3rem; text-align: center;
+    background: radial-gradient(60rem 30rem at 50% -10rem, #1b2233 0%, var(--bg) 70%); }
+  .icon { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 40px #000a; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: .12em; margin: 1.25rem 0 .5rem; font-weight: 900; }
+  .tag { color: var(--dim); font-size: 1.15rem; max-width: 34rem; margin: 0 auto 2rem; }
+  .cta { display: inline-flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
+  .btn { display: inline-block; padding: .85rem 1.4rem; border-radius: 10px; font-weight: 800; letter-spacing: .04em;
+    border: 1px solid var(--line); background: var(--bg2); color: var(--text); }
+  .btn.play { border-color: var(--gold); color: var(--gold); }
+  .btn.soon { color: var(--faint); cursor: default; }
+  .btn:hover { text-decoration: none; filter: brightness(1.15); }
+  .note { color: var(--faint); font-size: .85rem; margin-top: 1rem; }
+
+  /* ---- sections ---- */
+  section { padding: 3rem 0; border-top: 1px solid var(--line); }
+  h2 { font-size: .9rem; letter-spacing: .2em; color: var(--gold); text-transform: uppercase; margin: 0 0 1rem; }
+  .lead { font-size: 1.35rem; line-height: 1.45; max-width: 40rem; margin: 0 0 1.5rem; }
+  .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .card { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 1.25rem 1.35rem; }
+  .card h3 { margin: 0 0 .5rem; font-size: 1rem; letter-spacing: .06em; }
+  .card p { margin: 0; color: var(--dim); font-size: .98rem; }
+  .k { color: var(--gold); margin-right: .4rem; }
+
+  .shots { display: flex; gap: 1rem; overflow-x: auto; padding-bottom: .5rem; scroll-snap-type: x mandatory; }
+  .shots img { height: 30rem; border-radius: 14px; border: 1px solid var(--line); scroll-snap-align: start; flex: 0 0 auto; }
+  .shots .empty { color: var(--faint); font-style: italic; }
+
+  .numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1rem; text-align: center; }
+  .numbers b { display: block; font-size: 2rem; color: var(--text); }
+  .numbers span { color: var(--dim); font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+
+  .honest { border-left: 3px solid var(--red); padding-left: 1rem; color: var(--dim); }
+
+  footer { padding: 2.5rem 0 4rem; border-top: 1px solid var(--line); color: var(--faint); font-size: .9rem; }
+  footer nav a { margin-right: 1.25rem; color: var(--dim); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="icon" src="icon.png" alt="NINJA WORLD icon — a hooded shinobi in a hexagon" width="128" height="128">
+    <h1>NINJA WORLD</h1>
+    <p class="tag">A shinobi RPG of long marches, real hunts, and a world that moves without you.</p>
+    <div class="cta">
+      <a class="btn play" href="https://play.google.com/store/apps/details?id=com.paultulai.ninjaworld">Get it on Google Play</a>
+      <span class="btn soon">App Store — soon</span>
+    </div>
+    <p class="note">Free. No ads. Nothing for sale. Made by one person in Kitchener, Ontario.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The long way round</h2>
+    <p class="lead">You wake with no name worth keeping and fifty ryō. Everything after that is earned — by walking, by hunting, by learning a trade well enough that somebody pays you for it.</p>
+    <div class="grid">
+      <div class="card">
+        <h3><span class="k">道</span>A WORLD YOU CROSS ON FOOT</h3>
+        <p>Two thousand hexes of fog, ten villages, thirteen dungeons. Marches take real minutes: set off, put the phone down, come back to find out what happened. Walk far enough from a village and the ground turns crimson, and crimson means it.</p>
+      </div>
+      <div class="card">
+        <h3><span class="k">戦</span>FIGHTS YOU CAN READ</h3>
+        <p>Every fight opens hands-only, so farming costs you nothing but breath. Flip to the Art when the boar turns out to be something worse. Up to three at once, each drawn on the field — lunges, cuts, a bolt crossing the ground, bodies that fall where they die.</p>
+      </div>
+      <div class="card">
+        <h3><span class="k">炉</span>SIX TRADES THAT ARE TRADES</h3>
+        <p>Skinning, tanning, leatherworking, cooking, alchemy, smithing. A pelt comes off an animal, at the animal, with the knife you happen to be carrying — and it is a green hide until you have put it through the racks.</p>
+      </div>
+      <div class="card">
+        <h3><span class="k">術</span>ARTS WITH A LEDGER</h3>
+        <p>Sixty-one jutsu across five natures, an arts tree that gates what your hands can do, and a mastery ledger that sharpens a technique for throwing it. Every jutsu has a card that tells you what it is worth in <em>your</em> hands.</p>
+      </div>
+      <div class="card">
+        <h3><span class="k">村</span>A VILLAGE YOU WALK</h3>
+        <p>The hub is the village itself. You stand at the gate; tap the tavern, the forges, the market, and your ninja walks there down the street. Where you left them is where they are when you come back.</p>
+      </div>
+      <div class="card">
+        <h3><span class="k">影</span>OTHER PEOPLE, LIGHTLY</h3>
+        <p>Open the map and you may see another walker's pin. Report anyone, block anyone — a block hides them everywhere, not only on ground you have already walked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>On the phone</h2>
+    <div class="shots" id="shots">
+      <p class="empty">Screenshots land here with the first store release.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Counted, not estimated</h2>
+    <div class="numbers">
+      <div><b>2,080</b><span>hexes</span></div>
+      <div><b>92</b><span>creatures</span></div>
+      <div><b>296</b><span>items</span></div>
+      <div><b>61</b><span>jutsu</span></div>
+      <div><b>39</b><span>set lines</span></div>
+      <div><b>13</b><span>dungeons</span></div>
+      <div><b>10</b><span>villages</span></div>
+      <div><b>0</b><span>ads</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>No ads. No purchases. Nothing sold.</h2>
+    <p class="honest">There is a karma exchange, and it sells cosmetics and convenience — never power. There is no real money anywhere in the app and no advertising SDK in the build. The privacy policy is one page long because there is not much to say.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Code of Conduct</a>
+      <a href="delete-account.html">Delete your account</a>
+      <a href="mailto:paul@getsavx.ca">Contact</a>
+    </nav>
+    <p>© 2026 ROCA Technologies Inc. · Kitchener, Ontario · NINJA WORLD is made by one person, shipped often. Bug reports go straight into the next version.</p>
+  </div>
+</footer>
+
+</body>
+</html>
