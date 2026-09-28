@@ -33,6 +33,7 @@
   .btn { display: inline-block; padding: .85rem 1.4rem; border-radius: 10px; font-weight: 800; letter-spacing: .04em;
     border: 1px solid var(--line); background: var(--bg2); color: var(--text); }
   .btn.play { border-color: var(--gold); color: var(--gold); }
+  .btn.web { border-color: var(--gold); background: var(--gold); color: #06131F; }
   .btn.soon { color: var(--faint); cursor: default; }
   .btn:hover { text-decoration: none; filter: brightness(1.15); }
   .note { color: var(--faint); font-size: .85rem; margin-top: 1rem; }
@@ -69,7 +70,12 @@
     <h1>NINJA WORLD</h1>
     <p class="tag">A shinobi RPG of long marches, real hunts, and a world that moves without you.</p>
     <div class="cta">
-      <a class="btn play" href="https://play.google.com/store/apps/details?id=com.paultulai.ninjaworld">Get it on Google Play</a>
+      <a class="btn web" href="/play/">Play in your browser</a>
+      <!-- Closed beta: the store page is hidden from anyone not on the tester
+           list, so the button goes to the opt-in page. Switch back to
+           /store/apps/details?id=com.paultulai.ninjaworld once it is on open
+           testing or production. -->
+      <a class="btn play" href="https://play.google.com/apps/testing/com.paultulai.ninjaworld">Android beta (Google Play)</a>
       <span class="btn soon">App Store — soon</span>
     </div>
     <p class="note">Free. No ads. Nothing for sale. Made by one person in Kitchener, Ontario.</p>
