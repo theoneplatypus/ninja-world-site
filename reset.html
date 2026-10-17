@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NINJA WORLD — Set a new password</title>
+<title>KAGEMURA — Set a new password</title>
 <meta name="robots" content="noindex">
 <style>
   :root { --bg:#06131F; --panel:#0B1D2E; --line:#2E6E9E; --glow:#5FB8EE; --text:#DDEBF7; --dim:#7E9BB5; --bad:#E5484D; }
@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="card">
-  <h1>NINJA WORLD</h1>
+  <h1>KAGEMURA</h1>
   <p id="lead">Checking your reset link…</p>
   <form id="f" hidden>
     <label for="p1">NEW PASSWORD</label>
@@ -42,7 +42,7 @@
   const sb = supabase.createClient("https://gdetfjbdrrlxbscaynik.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkZXRmamJkcnJseGJzY2F5bmlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ4MTM3NzAsImV4cCI6MjEwMDM4OTc3MH0.Po1EefCL2GdRoTqrxg0YsmNWQtq1J6fnPtduMxzZ0s8", { auth: { detectSessionInUrl: true, persistSession: false } });
   const $ = (id) => document.getElementById(id);
   const ready = () => { $("lead").textContent = "Choose a new password for your ninja."; $("f").hidden = false; };
-  const dead = () => { $("lead").innerHTML = "This link has expired or was already used. Open NINJA WORLD, tap <b>Forgot password?</b> and send a new one."; };
+  const dead = () => { $("lead").innerHTML = "This link has expired or was already used. Open Kagemura, tap <b>Forgot password?</b> and send a new one."; };
   sb.auth.onAuthStateChange((ev, session) => { if (ev === "PASSWORD_RECOVERY" || session) ready(); });
   setTimeout(async () => { const { data } = await sb.auth.getSession(); if (data.session) ready(); else if ($("f").hidden) dead(); }, 1500);
   $("show").onclick = () => { const t = $("p1").type === "password" ? "text" : "password"; $("p1").type = t; $("p2").type = t; $("show").textContent = t === "text" ? "hide" : "show"; };
@@ -57,7 +57,7 @@
     $("go").disabled = false;
     if (error) { $("msg").textContent = "Could not set it: " + error.message; return; }
     $("f").hidden = true;
-    $("lead").textContent = "Done. Open NINJA WORLD and log in with your ninja name and the new password.";
+    $("lead").textContent = "Done. Open Kagemura and log in with your ninja name and the new password.";
     $("msg").textContent = "";
     await sb.auth.signOut();
   };
